@@ -1,0 +1,87 @@
+#dropdownMenuButton1 {
+    padding: 10px 50px;
+    margin: 20px;
+    background-color: white;
+}
+
+body{
+    background-color: #e7e7de;
+    font-family:'Roboto';
+    
+}
+.logo{
+    width: 10vw;
+}
+
+.col-8{
+    color: white;
+    text-align: center;
+    font-size: 1.8vw;
+    font-weight: bold;
+    margin-top: 1%;
+}
+.user{
+    width: 6vw;
+    margin-left: 50%;
+}
+.tipo{
+    margin-left: 55%;
+    color: white;
+    font-size: 0.7vw;
+}
+
+.navbar{
+    padding: 0 !important;
+}
+
+.contenedor-menu{
+    padding: 0 !important;
+}
+
+.col{
+    text-align: center;
+    color: white;
+    font-size: 1.5vw;
+    text-decoration:none;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.links-menu:hover {
+    color:white;
+    background-color: #036469;
+}
+
+#footer{
+    background-color: #06174b;
+    margin-top: 8%;
+    overflow: hidden;
+}
+#call{
+    width: 5vw;
+}
+.redes{
+    width: 4vw;
+    
+}
+.tabla1{
+    display:block;
+    font-size: 1.3vw;
+    margin: 2% auto;
+    width:60%;
+    text-align:center;
+
+}
+h5{
+    display:block;
+    font-size: 1.7vw;
+    text-align:center;
+    margin-top:5%;
+}
+
+/* .btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #8064A2 !important;
+} */
+
+
+

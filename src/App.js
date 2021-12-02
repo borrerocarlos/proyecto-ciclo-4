@@ -1,19 +1,19 @@
-
-import Cabecera from './componentes/Cabecera';
-import Menu from './componentes/Menu';
-import Pie from './componentes/Pie';
+import ListarOrdenesPage from "./pages/ListarOrdenes"
+import EditarRutasPage from "./pages/EditarRutas"
+import Home from "./pages/home";
 import './styles.css';
-
+import "./componentes/ListarOrdenes.css";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
   return (
-
-    <div>
-      <Cabecera/>
-      <Menu/>
-      <Pie/>
-
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ListarOrdenes" element={<ListarOrdenesPage />} />
+        <Route path="/EditarRutas" element={<EditarRutasPage />} />
+      </Routes>
+    </BrowserRouter>
   
   );
 }
