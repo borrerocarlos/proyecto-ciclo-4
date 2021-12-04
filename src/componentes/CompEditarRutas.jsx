@@ -1,6 +1,19 @@
+import { useState } from "react"
+import rutas from "./rutas"
 import "./ListarOrdenes.css"
 
 const EditarRutas = () => {
+    
+    function infoRutas(numRuta, LugarOrigen, LugarDestino, distancia) {
+        let ruta = numRuta;
+        let LOrigen = LugarOrigen;
+        let LDestino = LugarDestino;
+        let Dist = distancia;
+
+        return(ruta, LOrigen, LDestino, Dist)
+    }
+
+
     return(
         <div>
             <div className="row fluid p-3" >
@@ -20,64 +33,42 @@ const EditarRutas = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class=" align-items-center">
-                            <td>1</td>
-                            <td>Barranquilla</td>
-                            <td>Cartagena</td>
-                            <td><button type="button" class="btn btn-primary mx-4" data-bs-toggle="modal" data-bs-target="#editUsu">Editar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
-                            <div class="modal fade" id="editUsu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Editar ruta #1</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <form>
-                                                <div class="mb-3">
-                                                    <label for="numRuta" class="col-form-label"># Ruta</label>
-                                                    <input type="number" min="0" class="form-control" id="numRuta" value="1"/>
-                                                    <label for="LOrigen" class="col-form-label" >Lugar Origen</label>
-                                                    <input type="text" class="form-control" id="LOrigen" value="Barranquilla"/>
-                                                    <label for="LDestino" class="col-form-label" >Lugar Destino</label>
-                                                    <input type="text" class="form-control" id="LDestino" value="Cartagena"/>
-                                                    <label for="Distancia" class="col-form-label">Distancia en km</label>
-                                                    <input type="number" min="0" class="form-control" id="Distancia" value="100"/>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                            <button type="button" class="btn btn-primary" >Guardar</button>
+                        {rutas.map((r)=>
+                            <tr class=" align-items-center">
+                                <td>{r.numRuta}</td>
+                                <td>{r.LugarOrigen}</td>
+                                <td>{r.LugarDestino}</td>
+                                <td><button type="button" class="btn btn-primary mx-4" data-bs-toggle="modal" data-bs-target={r.numTarget}>Editar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
+                                <div class="modal fade" id={r.numID} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Editar ruta #{r.numRuta}</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label for="numRuta" class="col-form-label"># Ruta</label>
+                                                        <input type="number" min="0" class="form-control" id="numRuta" value={r.numRuta}/>
+                                                        <label for="LOrigen" class="col-form-label" >Lugar Origen</label>
+                                                        <input type="text" class="form-control" id="LOrigen" value={r.LugarOrigen}/>
+                                                        <label for="LDestino" class="col-form-label" >Lugar Destino</label>
+                                                        <input type="text" class="form-control" id="LDestino" value={r.LugarDestino}/>
+                                                        <label for="Distancia" class="col-form-label">Distancia en km</label>
+                                                        <input type="number" min="0" class="form-control" id="Distancia" value={r.distancia}/>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                                <button type="button" class="btn btn-primary" >Guardar</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Medellin</td>
-                            <td>Bogota</td>
-                            <td><button type="button" class="btn btn-primary mx-4">Editar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Santa Marta</td>
-                            <td>Barranquilla</td>
-                            <td><button type="button" class="btn btn-primary mx-4">Editar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Medellin</td>
-                            <td>Cartagena</td>
-                            <td><button type="button" class="btn btn-primary mx-4">Editar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Riohacha</td>
-                            <td>Santa Marta</td>
-                            <td><button type="button" class="btn btn-primary mx-4">Editar</button><button type="button" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
+                            </tr>
+                        )}
                     </tbody>
                 </table>
             </div>

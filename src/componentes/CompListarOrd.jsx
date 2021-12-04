@@ -43,46 +43,6 @@ const ListarOrdenes = () => {
                 </table>
             </div>
         </div>
-        //             <tbody>
-        //                 <tr style={{ 'background-color': '#fff'}}>
-        //                     <td>1</td>
-        //                     <td>|</td>
-        //                     <td>20/11/2021</td>
-        //                     <td>|</td>
-        //                     <td>Pendiente</td>
-        //                 </tr>
-        //                 <tr style={{ 'background-color': '#fff'}}>
-        //                     <td>2</td>
-        //                     <td>|</td>
-        //                     <td>22/11/2021</td>
-        //                     <td>|</td>
-        //                     <td>Despachado</td>
-        //                 </tr>
-        //                 <tr style={{ 'background-color': '#fff'}}>
-        //                     <td>3</td>
-        //                     <td>|</td>
-        //                     <td>24/11/2021</td>
-        //                     <td>|</td>  
-        //                     <td>Cancelado</td>
-        //                 </tr>
-        //                 <tr style={{ 'background-color': '#fff'}}>
-        //                     <td>4</td>
-        //                     <td>|</td>
-        //                     <td>26/11/2021</td>
-        //                     <td>|</td>  
-        //                     <td>Finalizado</td>
-        //                 </tr>
-        //                 <tr style={{ 'background-color': '#fff'}}>
-        //                     <td>5</td>
-        //                     <td>|</td>
-        //                     <td>28/11/2021</td>
-        //                     <td>|</td>  
-        //                     <td>Finalizado</td>
-        //                 </tr>
-        //             </tbody>
-        //         </table>
-        //     </div>
-        // </div>
     )   
 }
 
